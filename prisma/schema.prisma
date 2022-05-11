@@ -1,0 +1,20 @@
+model Explorer {
+  id Int @id @default(autoincrement())
+  name String @unique
+  username String @db.VarChar(255)
+  mission String @db.VarChar(255)
+  azureCertification Boolean @default(false)
+  dateCreated DateTime @default(now())
+  lastUpdated DateTime @updatedAt
+}
+
+
+No pude continuar por este error:
+
+    $ npx prisma init
+    Error: The default query engine type (Node-API, "library") is currently not supported for 32bit Node. 
+    Please set `engineType = "binary"` in the "generator" block of your "schema.prisma" file 
+    (or use the environment variables "PRISMA_CLIENT_ENGINE_TYPE=binary" and/or "PRISMA_CLI_QUERY_ENGINE_TYPE=binary".)
+
+Busque las soluciones pero no pude.
+Pronto tendré una computadora nueva y actualizada para realizar todas estas practicas
